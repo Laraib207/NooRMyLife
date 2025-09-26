@@ -26,7 +26,7 @@ export default function Home(){
         <ServicesGrid />
         <section id="projects" className="py-12 bg-gray-50 dark:bg-slate-800 transition-colors duration-300">
           <div className="max-w-6xl mx-auto px-6">
-            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-300">Featured Projects</h2>
+            <h2 className="text-3xl font-bold mb-6 text-gray-900 dark:text-white transition-colors duration-300">Featured Projectss</h2>
             <ProjectsGrid />
           </div>
         </section>
