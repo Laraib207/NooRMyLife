@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="800" viewBox="0 0 1200 800">
+<defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#06b6d4"/><stop offset="1" stop-color="#7c3aed"/></linearGradient></defs>
+<rect width="1200" height="800" fill="#f8fafc"/>
+<g transform="translate(100,100)">
+  <rect x="0" y="0" width="1000" height="600" rx="20" fill="url(#g)" opacity="0.15"/>
+  <circle cx="200" cy="200" r="120" fill="#fff" opacity="0.6"/>
+  <rect x="380" y="120" width="440" height="260" rx="12" fill="#fff" opacity="0.9"/>
+  <text x="50" y="40" font-size="28" fill="#0f172a">Sample UI Illustration</text>
+</g>
+</svg>
