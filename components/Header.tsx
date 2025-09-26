@@ -143,7 +143,7 @@ export default function Header() {
                   href="/#contact"
                   className="group px-6 py-2 rounded-full bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold shadow-lg hover:shadow-cyan-500/25 hover:scale-105 transition-all duration-300 flex items-center gap-2"
                 >
-                  Let's Talk
+                  Let's Talk With me 
                   <SparklesIcon className="w-4 h-4 group-hover:rotate-12 transition-transform" />
                 </Link>
               </motion.div>
