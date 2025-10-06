@@ -11,3 +11,7 @@ export default function ProjectPage({ params }: any) {
     </section>
   )
 }
+
+
+
+
