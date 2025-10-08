@@ -1,8 +1,20 @@
-  /** @type {import('next').NextConfig} */
+//   /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   reactStrictMode: true,
+//   images: {
+//     unoptimized: true
+//   }
+// }
+// module.exports = nextConfig
+
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  output: 'export',
+  trailingSlash: true,
   images: {
-    unoptimized: true
+    unoptimized: true  // Important for static export
   }
 }
+
 module.exports = nextConfig

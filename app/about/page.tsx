@@ -354,8 +354,7 @@ export default function About() {
       opacity: 1,
       y: 0,
       transition: {
-        duration: 0.8,
-        ease: "easeOut"
+        duration: 0.8
       }
     }
   }
@@ -379,6 +378,7 @@ export default function About() {
         {/* Floating particles */}
         <div className="absolute inset-0">
           {[...Array(25)].map((_, i) => (
+            // @ts-ignore
             <motion.div
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-60"

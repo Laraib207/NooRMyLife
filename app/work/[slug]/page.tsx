@@ -1,5 +1,11 @@
 import { projects } from '../../../data/projects'
 
+export async function generateStaticParams() {
+  return projects.map((project) => ({
+    slug: project.slug,
+  }))
+}
+
 export default function ProjectPage({ params }: any) {
   const project = projects.find(p => p.slug === params.slug)
   if (!project) return <div className="pt-12">Project not found</div>
