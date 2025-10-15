@@ -13,7 +13,8 @@ import SkillsSection from '../components/SkillsSection'
 import AwardsSection from '../components/AwardsSection'
 import GallerySection from '../components/GallerySection'
 import NewsletterCTA from '../components/NewsletterCTA'
-import ProjectCard from '../components/ProjectCard'
+import Featureplan from '../components/Featureplan'
+
 import Contact from './contact/page'
 
 export default function Home(){
@@ -38,6 +39,11 @@ export default function Home(){
         <Testimonials />
         <ContactSection />
         <NewsletterCTA />
+      
+        <CTAOverlay />
+        <Contact />
+        <Featureplan />
+
       </main>
       <FooterSite />
     </>

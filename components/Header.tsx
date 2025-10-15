@@ -25,6 +25,7 @@ export default function Header() {
     { name: 'About', href: '/about', icon: SparklesIcon },
     { name: 'Awards', href: '/#awards', icon: TrophyIcon },
     { name: 'Contact', href: '/contact', icon: SparklesIcon },
+    { name: 'FeaturePlan', href: '/featureplan', icon: SparklesIcon },
   ]
 
   return (
