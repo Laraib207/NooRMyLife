@@ -1,6 +1,15 @@
-import mongoose from 'mongoose'
+import mongoose, { Document, Model } from 'mongoose'
 
-const MessageSchema = new mongoose.Schema({
+interface IMessage extends Document {
+  name: string
+  email: string
+  subject: string
+  message: string
+  createdAt: Date
+  read: boolean
+}
+
+const MessageSchema = new mongoose.Schema<IMessage>({
   name: {
     type: String,
     required: [true, 'Please provide a name'],
@@ -31,4 +40,6 @@ const MessageSchema = new mongoose.Schema({
   },
 })
 
-export default mongoose.models.Message || mongoose.model('Message', MessageSchema)
+const Message: Model<IMessage> = mongoose.models.Message || mongoose.model<IMessage>('Message', MessageSchema)
+
+export default Message

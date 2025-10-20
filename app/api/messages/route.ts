@@ -4,9 +4,15 @@ import Message from '@/lib/models/Message'
 
 export async function GET(request: NextRequest) {
   try {
-    await dbConnect()
+    const db = await dbConnect()
 
-    const messages = await Message.find({}).sort({ createdAt: -1 }).lean()
+    // If no database connection, return empty array for development
+    if (!db) {
+      console.log('No database connection - returning empty messages array')
+      return NextResponse.json({ messages: [] })
+    }
+
+    const messages = await Message.find({}).sort({ createdAt: -1 })
 
     return NextResponse.json({ messages })
   } catch (error) {
@@ -20,7 +26,13 @@ export async function GET(request: NextRequest) {
 
 export async function PUT(request: NextRequest) {
   try {
-    await dbConnect()
+    const db = await dbConnect()
+
+    // If no database connection, simulate success for development
+    if (!db) {
+      console.log('No database connection - simulating message update')
+      return NextResponse.json({ message: { _id: 'dev', read: true } })
+    }
 
     const { id, read } = await request.json()
 
@@ -35,7 +47,7 @@ export async function PUT(request: NextRequest) {
       id,
       { read },
       { new: true }
-    ).lean()
+    )
 
     if (!updatedMessage) {
       return NextResponse.json(

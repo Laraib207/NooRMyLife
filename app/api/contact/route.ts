@@ -4,7 +4,16 @@ import Message from '@/lib/models/Message'
 
 export async function POST(request: NextRequest) {
   try {
-    await dbConnect()
+    const db = await dbConnect()
+
+    // If no database connection, simulate success for development
+    if (!db) {
+      console.log('No database connection - simulating successful message save')
+      return NextResponse.json(
+        { message: 'Message sent successfully (development mode)!' },
+        { status: 201 }
+      )
+    }
 
     const { name, email, subject, message } = await request.json()
 
