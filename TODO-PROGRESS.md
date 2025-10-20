@@ -11,6 +11,6 @@
 - [x] Update ContactSection.tsx to submit form data to API
 - [x] Create app/admin/messages/page.tsx for admin message view
 - [x] Set up .env.local with MongoDB Atlas connection string
-- [ ] Test form submission and message storage
-- [ ] Test admin page for viewing messages
-- [ ] Deploy to Vercel with environment variables
+- [x] Test form submission and message storage
+- [x] Test admin page for viewing messages
+- [x] Deploy to Vercel with environment variables
